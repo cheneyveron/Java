@@ -10,17 +10,18 @@ public class Fenxi {
 	public static double getTotalScore(String s){
 		Scanner scanner = new Scanner(s);
 		scanner.useDelimiter("[^0123456789.]+");
-		double totalScore=0;
+		double volume=1;
 		while(scanner.hasNext())
 		{
-			try{double score = scanner.nextDouble();
-			totalScore = totalScore+score;
+			try{
+				double vol = scanner.nextDouble();
+				volume = volume*vol;
 			}
 			catch(InputMismatchException exp){
 				scanner.next();
 			}
 		}
 		scanner.close();
-		return totalScore;
+		return volume;
 		}
 }

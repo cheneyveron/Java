@@ -9,8 +9,8 @@ import java.io.*;
 
 public class AnalyseResult {
 	public static void main(String[] args){
-		File fRead = new File("score.txt");
-		File fWrite= new File("scoreAnalysis.txt");
+		File fRead = new File("goods.txt");
+		File fWrite= new File("goodsVolume.txt");
 		try{
 			Writer out = new FileWriter(fWrite,true);
 			BufferedWriter bufferWrite = new  BufferedWriter(out);
@@ -18,9 +18,8 @@ public class AnalyseResult {
 			BufferedReader bufferRead = new BufferedReader(in);
 			String str = null;
 			while((str=bufferRead.readLine())!=null) {
-				double totalScore = Fenxi.getTotalScore(str);
-				int averageScore = (int) (totalScore/3);
-				str = str+" 总分:"+totalScore+",平均分:"+averageScore;
+				double Volume = Fenxi.getTotalScore(str);
+				str = str+" 体积:"+Volume;
 				System.out.println(str);
 				bufferWrite.write(str);
 				bufferWrite.newLine();
