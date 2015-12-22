@@ -1,2 +1,2 @@
 # Java
-Just some java assements
+Just some java assignments
